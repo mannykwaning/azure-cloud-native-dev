@@ -1,0 +1,25 @@
+﻿Homework #4 Azure Blob Storage
+--------------------------------------------------------------------------------------------------
+Name: Emmanuel Aboah
+Harvard Email: ema526@g.harvard.edu
+Azure Email: AboahEmmanuel21@outlook.com
+
+----------------------------------------------------------------------------------------------------
+Project URL And Keys:
+
+Functions run much better locally than they do In Azure 😕
+
+Please note to leave the end of the url empty as body isn't expected by function.
+
+ConversionJobsStatus REST Function: https://hw4azurefunctionssolution20210409170924.azurewebsites.net/api/v1/jobs/{id}?code=t6/PBSl9pBW3MUMvL995KbbhSV958wrZWaZC5Npg7FzwDRasPCqcIA==
+replace {Id}: imageconversions
+ConversionJobsStatusById REST Function: https://hw4azurefunctionssolution20210409170924.azurewebsites.net/api/v1/jobs/%7Bimageconversions%7D?code=8aUcJl1PkGJiI1w2RfNAk5XSXW8NYxd2hmhRM2bfqUH15FSgTPwdLQ==
+
+Blob service SAS URL
+https://csie94hw4storage.blob.core.windows.net/?sv=2020-02-10&ss=bfqt&srt=sco&sp=rwdlacup&se=2021-04-30T04:00:00Z&st=2021-03-10T05:00:00Z&spr=https&sig=eL7nZmL%2FOleEIls9Yf2QYUsyzBT%2FId5mhZ29yrj%2FH8Y%3D
+File service SAS URL
+https://csie94hw4storage.file.core.windows.net/?sv=2020-02-10&ss=bfqt&srt=sco&sp=rwdlacup&se=2021-04-30T04:00:00Z&st=2021-03-10T05:00:00Z&spr=https&sig=eL7nZmL%2FOleEIls9Yf2QYUsyzBT%2FId5mhZ29yrj%2FH8Y%3D
+Queue service SAS URL
+https://csie94hw4storage.queue.core.windows.net/?sv=2020-02-10&ss=bfqt&srt=sco&sp=rwdlacup&se=2021-04-30T04:00:00Z&st=2021-03-10T05:00:00Z&spr=https&sig=eL7nZmL%2FOleEIls9Yf2QYUsyzBT%2FId5mhZ29yrj%2FH8Y%3D
+Table service SAS URL
+https://csie94hw4storage.table.core.windows.net/?sv=2020-02-10&ss=bfqt&srt=sco&sp=rwdlacup&se=2021-04-30T04:00:00Z&st=2021-03-10T05:00:00Z&spr=https&sig=eL7nZmL%2FOleEIls9Yf2QYUsyzBT%2FId5mhZ29yrj%2FH8Y%3D

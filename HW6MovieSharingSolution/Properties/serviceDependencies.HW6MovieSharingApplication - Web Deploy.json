@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/csci-e94/databases/cscie94hw6storage",
+      "type": "mssql.azure",
+      "connectionId": "HW6MovieSharingSolutionContext",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

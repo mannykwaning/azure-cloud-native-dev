@@ -1,0 +1,53 @@
+﻿Homework #6 Razor Pages Movie App
+--------------------------------------------------------------------------------------------------
+
+Name: Emmanuel Aboah
+Harvard Email: ema526@g.harvard.edu
+Azure Email: AboahEmmanuel21@outlook.com
+
+--------------------------------------------------------------------------------------------------
+
+Published Apps:
+App Service - https://hw6moviesharingapplication.azurewebsites.net/
+Azure Container registry - 20.75.210.102
+Azure Container App - https://hw6containerapp.azurewebsites.net
+
+Additional Entity Fields:
+Owner --> To Indicate the owner of the Movie
+OwnerEmail --> To Indicate the owner's email addy
+UserRealmId --> Authenticated User Azure ID
+SharedUserRealmId --> Borrower's Authenticated User Azure ID
+CanBeShared --> Boolean flag to indicate wheather a movie can be shared
+AprovalStatus -> Shows the approval status of a request
+isApproved -> Boolean flag to Show If the Movie was approved.
+
+-- Only Authenticated users in Azure AD can access the app and view the movies
+
+Statuses:
+Available
+Rejected
+Approved
+Returned
+
+WorkFlows:
+
+-- First Create some movies in oreder to see the features
+   *** NOTE THAT: All feilds are required, else the post action returns to same page - same applies to edit page ***
+   *** Please Mark the Approval status as "Available" When created in order to see movie listed ***
+
+-- Movies That are marked shareable will appear in the "All Movies Library" and can be
+   borrowed by Aunthenticated users of the app who don't own the movie.
+
+Request To Borrow a Movie
+ * Movies a user does not own will have a borrow button next to them,
+ * Once approved, the movie will appear in the borrowed items in the 
+   User's Library.
+
+Review Request
+ * Movies that have been requested will have a "Review Request" button next to them
+ * Owner can approve or reject. If approved, the movie will appear in the requestors
+   Library in the Borrowed movies section. Else it will stay as available.
+
+Return A borrowed Movie
+ * A return button appears next to the borrowed movie, once clicked the movie returns
+   to the owner and is marked as available.

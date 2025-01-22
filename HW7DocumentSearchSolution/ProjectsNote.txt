@@ -1,0 +1,20 @@
+﻿Homework #7 Razor Pages Azure Search Service
+--------------------------------------------------------------------------------------------------
+
+Name: Emmanuel Aboah
+Harvard Email: ema526@g.harvard.edu
+Azure Email: AboahEmmanuel21@outlook.com
+
+--------------------------------------------------------------------------------------------------
+
+QueryKey - 6CE3A814D53C37E2CE463FA20DFDB9C2
+
+Published Apps:
+App Service - https://hw7documentsearchsolutionapp.azurewebsites.net/
+
+Note: 
+ - Use the enter key when searching text
+ - The filter for pdf button includes the search text after the enter key is hit,
+   so please hit enter to include text search before the filter parameter.
+ - Pagination was attempted but does not work well so I excluded it in order not 
+   to affect other functionality. But the code is present for grading consideration :)

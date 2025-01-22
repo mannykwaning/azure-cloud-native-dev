@@ -1,0 +1,64 @@
+﻿@page
+@model HW6MovieSharingSolution.Pages.Movies.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Movie</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Movie.Title" class="control-label"></label>
+                <input asp-for="Movie.Title" class="form-control" />
+                <span asp-validation-for="Movie.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.Category" class="control-label"></label>
+                <input asp-for="Movie.Category" class="form-control" />
+                <span asp-validation-for="Movie.Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.Owner" class="control-label"></label>
+                <input asp-for="Movie.Owner" class="form-control" />
+                <span asp-validation-for="Movie.Owner" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.OwnerEmail" class="control-label"></label>
+                <input asp-for="Movie.OwnerEmail" class="form-control" />
+                <span asp-validation-for="Movie.OwnerEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.SharedDate" class="control-label"></label>
+                <input asp-for="Movie.SharedDate" class="form-control" />
+                <span asp-validation-for="Movie.SharedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.AprovalStatus" class="control-label"></label>
+                <input asp-for="Movie.AprovalStatus" class="form-control" />
+                <span asp-validation-for="Movie.AprovalStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.CanBeShared" class="control-label"></label>
+                <input type="checkbox" asp-for="Movie.CanBeShared" />
+                <span asp-validation-for="Movie.CanBeShared" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

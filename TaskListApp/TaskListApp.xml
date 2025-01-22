@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TaskListApp</name>
+    </assembly>
+    <members>
+        <member name="T:TaskListApp.Common.LoggingEvents">
+            <summary>
+            Defines the event ids for logging
+            </summary>
+        </member>
+        <member name="F:TaskListApp.Common.LoggingEvents.GetItem">
+            <summary>
+            The get item
+            </summary>
+        </member>
+        <member name="F:TaskListApp.Common.LoggingEvents.InsertItem">
+            <summary>
+            The insert item
+            </summary>
+        </member>
+        <member name="F:TaskListApp.Common.LoggingEvents.UpdateItem">
+            <summary>
+            The update item
+            </summary>
+        </member>
+        <member name="F:TaskListApp.Common.LoggingEvents.DeleteItem">
+            <summary>
+            The delete item
+            </summary>
+        </member>
+        <member name="F:TaskListApp.Common.LoggingEvents.GetItemNotFound">
+            <summary>
+            The get item not found
+            </summary>
+        </member>
+        <member name="F:TaskListApp.Common.LoggingEvents.UpdateItemNotFound">
+            <summary>
+            The update item not found
+            </summary>
+        </member>
+        <member name="F:TaskListApp.Common.LoggingEvents.DeleteItemNotFound">
+            <summary>
+            The delete item not found
+            </summary>
+        </member>
+        <member name="F:TaskListApp.Common.LoggingEvents.InternalError">
+            <summary>
+            The internal error
+            </summary>
+        </member>
+        <member name="T:TaskListApp.Controllers.TasksController">
+            <summary>
+            REST Endpoints/ Implimentation for Tasks List app 
+            </summary>
+        </member>
+        <member name="M:TaskListApp.Controllers.TasksController.GetTaskByIdAsync(System.Int32)">
+            <summary>
+            Gets the requested task based on id
+            </summary>
+            <param name="id"></param>
+            <returns>A task</returns>
+        </member>
+        <member name="T:TaskListApp.CustomSettings.TasksLimits">
+            <summary>
+            Tasks limits definition
+            </summary>
+        </member>
+        <member name="P:TaskListApp.CustomSettings.TasksLimits.MaxTasks">
+            <summary>
+            Gets and sets max number of tasks
+            </summary>
+            <value>
+            Max number of customers
+            </value>
+        </member>
+        <member name="T:TaskListApp.DataTransferObjects.TaskCreateDTO">
+            <summary>
+            Task Creation Object
+            </summary>
+        </member>
+        <member name="P:TaskListApp.DataTransferObjects.TaskCreateDTO.TaskName">
+            <summary>
+            Gets and sets the Task's Name
+            </summary>
+            <value>
+            Task Name
+            </value>
+        </member>
+        <member name="P:TaskListApp.DataTransferObjects.TaskCreateDTO.IsCompleted">
+            <summary>
+            Gets and sets the Task's status
+            </summary>
+            <value>
+            Completed true or false
+            </value>
+        </member>
+        <member name="P:TaskListApp.DataTransferObjects.TaskCreateDTO.DueDate">
+            <summary>
+            Gets and Sets the Task's Due Date
+            </summary>
+        </member>
+        <member name="M:TaskListApp.DataTransferObjects.TaskCreateDTO.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="P:TaskListApp.DataTransferObjects.TaskResponseDTO.Id">
+            <summary>
+            Gets and Sets the Task's Id
+            </summary>
+            <value>
+            Task Id
+            </value>
+        </member>
+        <member name="P:TaskListApp.DataTransferObjects.TaskResponseDTO.TaskName">
+            <summary>
+            Gets and sets the Task's Name
+            </summary>
+            <value>
+            Task Name
+            </value>
+        </member>
+        <member name="P:TaskListApp.DataTransferObjects.TaskResponseDTO.IsCompleted">
+            <summary>
+            Gets and sets the Task's status
+            </summary>
+            <value>
+            Completed true or false
+            </value>
+        </member>
+        <member name="P:TaskListApp.DataTransferObjects.TaskResponseDTO.DueDate">
+            <summary>
+            Gets and Sets the Task's Due Date
+            </summary>
+        </member>
+        <member name="P:TaskListApp.DataTransferObjects.TaskUpdateDTO.TaskName">
+            <summary>
+            Gets and sets the Task's Name
+            </summary>
+            <value>
+            Task Name
+            </value>
+        </member>
+        <member name="P:TaskListApp.DataTransferObjects.TaskUpdateDTO.IsCompleted">
+            <summary>
+            Gets and sets the Task's status
+            </summary>
+            <value>
+            Completed true or false
+            </value>
+        </member>
+        <member name="P:TaskListApp.DataTransferObjects.TaskUpdateDTO.DueDate">
+            <summary>
+            Gets and Sets the Task's Due Date
+            </summary>
+        </member>
+        <member name="M:TaskListApp.DataTransferObjects.TaskUpdateDTO.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:TaskListApp.Data.DBInitializer">
+            <summary>
+            Initializes (seeds) the database with data
+            </summary>
+            <remarks>Step 7</remarks>
+        </member>
+        <member name="M:TaskListApp.Data.DBInitializer.Initialize(TaskListApp.Data.TasksDatabaseContext)">
+            <summary>
+            Initializes the specified context with data
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:TaskListApp.Data.TasksDatabaseContext">
+            <summary>
+            Use Entity Framework to Establish Database Interaction with Data Models
+            </summary>
+            <seealso cref="T:Microsoft.EntityFrameworkCore.DbContext" />
+        </member>
+        <member name="M:TaskListApp.Data.TasksDatabaseContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{TaskListApp.Data.TasksDatabaseContext})">
+            <summary>
+            Constructor for <see cref="T:TaskListApp.Data.TasksDatabaseContext"/> class.
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="P:TaskListApp.Data.TasksDatabaseContext.TaskItems">
+            <summary>
+            Tasks table (Entity Set)
+            </summary>
+            <value>
+            Tasks
+            </value>
+        </member>
+        <member name="M:TaskListApp.Data.TasksDatabaseContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            For further configuration of discovered models
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:TaskListApp.Models.TaskItem">
+            <summary>
+            Task Entity
+            </summary>
+        </member>
+        <member name="M:TaskListApp.Startup.SetupCustomSettings(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Application Insights Integration
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:TaskListApp.Startup.SetupSwaggerDocuments(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Sets up the swagger documents
+            </summary>
+            <param name="services">The service collection</param>
+        </member>
+        <member name="M:TaskListApp.Startup.SetupSwaggerJsonGeneratgionAndUI(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Sets up Swagger JSON file and Swagger Interactive UI
+            </summary>
+            <param name="app"></param>
+        </member>
+    </members>
+</doc>

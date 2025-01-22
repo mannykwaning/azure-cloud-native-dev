@@ -1,0 +1,196 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "HW5 Image Porducer API",
+    "description": "Image Produvcer for Assignment V",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/v1/uploadedimages/{imageConversionMode}": {
+      "put": {
+        "tags": [
+          "ImageProducer"
+        ],
+        "summary": "Uploads a file",
+        "operationId": "UploadFile",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "imageConversionMode",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "fileData",
+            "type": "file"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ImageProducer.DataTransferObjects.ErrorResponse"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/uploadedimages/{filename}": {
+      "get": {
+        "tags": [
+          "ImageProducer"
+        ],
+        "summary": "Returns the File using the file name",
+        "operationId": "GetFileByFilename",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "filename",
+            "description": "",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "file"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/ImageProducer.DataTransferObjects.ErrorResponse"
+            }
+          }
+        }
+      }
+    },
+    "/uploadedimages": {
+      "get": {
+        "tags": [
+          "ImageProducer"
+        ],
+        "summary": "Retrieves the names of the blobs in the uploadedimages container",
+        "operationId": "GetAllFiles",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "file"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/ImageProducer.DataTransferObjects.ErrorResponse"
+            }
+          }
+        }
+      }
+    },
+    "/jobs": {
+      "get": {
+        "tags": [
+          "ImageProducer"
+        ],
+        "summary": "Retrieves all the jobs in the jobs table",
+        "operationId": "GetAllJobs",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/imageconversionmodes/{imageConversionMode}/jobs/{id}": {
+      "get": {
+        "tags": [
+          "ImageProducer"
+        ],
+        "summary": "Retrieves A single job from job table via JobId/ Blob Id",
+        "operationId": "GetJob",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "imageConversionMode",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "description": "",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "file"
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/ImageProducer.DataTransferObjects.ErrorResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ImageProducer.DataTransferObjects.ErrorResponse": {
+      "type": "object",
+      "properties": {
+        "errorNumber": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "parameterName": {
+          "type": "string"
+        },
+        "parameterValue": {
+          "type": "string"
+        },
+        "errorDescription": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+Homework #3 Azure Blob Storage
+--------------------------------------------------------------------------------------------------
+Name: Emmanuel Aboah
+Harvard Email: ema526@g.harvard.edu
+Azure Email: AboahEmmanuel21@outlook.com
+
+Notes:
+No additional UI was implemented for this homework due to time.
+The project should run via visual studio and swagger as previous class demo's.
+4 Funtional Test and rest client have been included.
+--> All passing
+
+Deployed app URL: https://hwiiiazureblobstorage.azurewebsites.net/index.html --> Was not working will update via comment in canvas

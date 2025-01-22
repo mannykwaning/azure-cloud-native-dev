@@ -1,0 +1,98 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Azure Search Demo</h2>
+        <form method="post">
+            <label asp-for="SearchString" class="control-label"></label>
+            <input asp-for="SearchString" class="form-control" />
+            <span asp-validation-for="SearchString" class="text-danger"></span>
+        </form>
+        <br />
+        <form method="get">
+            <div>
+                <p>
+                    Find by Document Type:
+                    <input type="text" asp-for="DocSearchString" />
+                    <input type="submit" value="Search" class="btn btn-primary" /> |
+                    <a asp-page="./Index">Back to List</a>
+                </p>
+            </div>
+        </form>
+        <form method="post">
+            <p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <a asp-page="./Index" asp-route-sortOrder="@Model.DocumentNameSort">
+                                    @Html.DisplayNameFor(model => model.SearchResults[0].DocumentName)
+                                </a>
+                            </th>
+                            <th>
+                                <a asp-page="./Index" asp-route-sortOrder="@Model.DocumentTypeSort">
+                                    @Html.DisplayNameFor(model => model.SearchResults[0].DocumentType)
+                                </a>
+                            </th>
+                            <th>
+                                <a asp-page="./Index" asp-route-sortOrder="@Model.LastModifiedDateSort">
+                                    @Html.DisplayNameFor(model => model.SearchResults[0].LastModifiedDate)
+                                </a>
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.SearchResults == null || Model.SearchResults.Count == 0)
+                        {
+                            <tr>
+                                <td style="color:red" colspan="2">No results found</td>
+                            </tr>
+                        }
+                        else
+                        {
+                            foreach (var item in Model.SearchResults)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DocumentName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DocumentType)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.LastModifiedDate)
+                                    </td>
+                                    <td>
+                                        <input type="submit" value="Download" asp-page-handler="Download" asp-route-fileName="@item.DocumentName" class="btn btn-primary" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        @foreach (var txt in item.HighlightHits)
+                                        {
+                                            @Html.Raw(txt)
+                                        }
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+                @*@{
+                        var prevDisabled = !Model.PagedResults.HasPrevPage ? "disabled" : "";
+                        var nextDisabled = !Model.PagedResults.HasNextPage ? "disabled" : "";
+                    }
+                    <a asp-page="./Index" asp-route-sortOrder="@Model.CurrentSort" asp-route-pageIndex="@Model.PagedResults.PageIndex - 1" class="btn btn-default @prevDisabled">Previous</a>
+                    <a asp-page="./Index" asp-route-sortOrder="@Model.CurrentSort" asp-route-pageIndex="@Model.PagedResults.PageIndex + 1" class="btn btn-default @nextDisabled">Next</a>*@
+            </p>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+﻿@page
+@model HW6MovieSharingSolution.Pages.Movies.BorrowModel
+@{
+    ViewData["Tite"] = "Borrow";
+}
+
+<h1>Requestor Info</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-5">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Movie.Id" />
+            <input type="hidden" asp-for="Movie.UserRealmId" />
+            <input type="hidden" asp-for="Movie.Owner" />
+            <input type="hidden" asp-for="Movie.OwnerEmail" />
+            <input type="hidden" asp-for="Movie.CanBeShared" />
+            <input type="hidden" asp-for="Movie.isApproved" />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Movie.Title)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Movie.Title)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Movie.Category)
+                    &nbsp;
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Movie.Category)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Movie.Owner)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Movie.Owner)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Movie.OwnerEmail)
+                </dt>
+                &nbsp;
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Movie.OwnerEmail)
+                </dd>
+            </dl>
+            <div class="form-group">
+                <label asp-for="Movie.SharedWithName" class="control-label"></label>
+                <input asp-for="Movie.SharedWithName" class="form-control" />
+                <span asp-validation-for="Movie.SharedWithName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.SharedWithEmailAddress" class="control-label"></label>
+                <input asp-for="Movie.SharedWithEmailAddress" class="form-control" />
+                <span asp-validation-for="Movie.SharedWithEmailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Request" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to movies</a>
+</div>

@@ -1,0 +1,16 @@
+Homework #1 Tic-Tac-Toe heuristic
+--------------------------------------------------------------------------------------------------
+Name: Emmanuel Aboah
+Harvard Email: ema526@g.harvard.edu
+Azure Email: AboahEmmanuel21@outlook.com
+
+Notes:
+No additional UI was implemented for this homework due to time.
+The project should run via visual studio and swagger as previous class demo's.
+Funtional Test and rest client have been included.
+Unit Tests Included purely for my testing purposes
+---> I noticed that the functional tests don't pass when run with the "Run all tests button"
+	 So I please run the by clicking the youngest parent in the hierachy and clicking the "Run Button/ ctrl + T".
+	 Or by running each test individually.
+
+Deployed app URL: https://tictactoe-hw1.azurewebsites.net/

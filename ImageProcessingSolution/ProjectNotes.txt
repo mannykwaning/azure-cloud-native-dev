@@ -1,0 +1,30 @@
+Homework #5 Image Processing App solution
+--------------------------------------------------------------------------------------------------
+
+Name: Emmanuel Aboah
+Harvard Email: ema526@g.harvard.edu
+Azure Email: AboahEmmanuel21@outlook.com
+
+--- 4 Projects
+
+- ImageProducer Api app
+ -> Url: https://imageproducerhw5.azurewebsites.net
+- ImageConsumer WebJob
+- LogicAppScheduler
+- Functional Tests
+
+--- Shared Access Signatures
+
+Blob service SAS URL:
+https://cscie94hw5storage.blob.core.windows.net/?sv=2020-02-10&ss=bfqt&srt=sco&sp=rwdlacupx&se=2021-05-31T04:00:00Z&st=2021-04-20T04:00:00Z&spr=https&sig=JvRa8scoRZs99xd%2FqDmJ8jtTAJN%2B%2FkaxZR02qzBHW6U%3D
+File service SAS URL:
+https://cscie94hw5storage.file.core.windows.net/?sv=2020-02-10&ss=bfqt&srt=sco&sp=rwdlacupx&se=2021-05-31T04:00:00Z&st=2021-04-20T04:00:00Z&spr=https&sig=JvRa8scoRZs99xd%2FqDmJ8jtTAJN%2B%2FkaxZR02qzBHW6U%3D
+Queue service SAS URL:
+https://cscie94hw5storage.queue.core.windows.net/?sv=2020-02-10&ss=bfqt&srt=sco&sp=rwdlacupx&se=2021-05-31T04:00:00Z&st=2021-04-20T04:00:00Z&spr=https&sig=JvRa8scoRZs99xd%2FqDmJ8jtTAJN%2B%2FkaxZR02qzBHW6U%3D
+Table service SAS URL:
+https://cscie94hw5storage.table.core.windows.net/?sv=2020-02-10&ss=bfqt&srt=sco&sp=rwdlacupx&se=2021-05-31T04:00:00Z&st=2021-04-20T04:00:00Z&spr=https&sig=JvRa8scoRZs99xd%2FqDmJ8jtTAJN%2B%2FkaxZR02qzBHW6U%3D
+
+--- Required Uploaded File Id's
+f029eab6-b564-49e5-aafd-56c359abeccf -> dogs
+a74f247a-ba69-4e40-96d2-f764ffa28617 -> seagul
+834c036f-af1a-4718-9b77-fe692326d4c8 -> Turkey

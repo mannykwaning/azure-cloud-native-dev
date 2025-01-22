@@ -1,0 +1,17 @@
+**/bin/
+**/.vs/
+**/obj/
+**/TestResults
+*.user
+*.log
+*.tmp
+packages/
+*.dll
+*.generated.cs
+publish/
+.vscode/
+*.mdf
+*.ldf
+_ReSharper*/
+*.nupkg
+**/lib/

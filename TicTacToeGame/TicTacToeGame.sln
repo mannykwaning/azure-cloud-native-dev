@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToeGame", "TicTacToeGame.csproj", "{D1D1614B-8A63-4B56-9C1A-39273A5F4CCD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToeGameFunctionalTests", "..\TicTacToeGameFunctionalTests\TicTacToeGameFunctionalTests.csproj", "{DCA307FE-F269-43D8-9E49-956B6DCE15A0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestClientSdkLibrary", "..\RestClientSdkLibrary\RestClientSdkLibrary.csproj", "{ED253E05-7198-4191-9689-CFDB32E0A50B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{36D6F097-7591-41CB-9424-85CE51D4AA7F}"
+	ProjectSection(SolutionItems) = preProject
+		TextFile1.txt = TextFile1.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1D1614B-8A63-4B56-9C1A-39273A5F4CCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1D1614B-8A63-4B56-9C1A-39273A5F4CCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1D1614B-8A63-4B56-9C1A-39273A5F4CCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1D1614B-8A63-4B56-9C1A-39273A5F4CCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCA307FE-F269-43D8-9E49-956B6DCE15A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCA307FE-F269-43D8-9E49-956B6DCE15A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCA307FE-F269-43D8-9E49-956B6DCE15A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCA307FE-F269-43D8-9E49-956B6DCE15A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED253E05-7198-4191-9689-CFDB32E0A50B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED253E05-7198-4191-9689-CFDB32E0A50B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED253E05-7198-4191-9689-CFDB32E0A50B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED253E05-7198-4191-9689-CFDB32E0A50B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53D137DC-F5A0-4229-8872-9B88E90B2A72}
+	EndGlobalSection
+EndGlobal

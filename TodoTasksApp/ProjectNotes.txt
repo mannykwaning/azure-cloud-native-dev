@@ -1,0 +1,13 @@
+Homework #2 Tic-Tac-Toe heuristic
+--------------------------------------------------------------------------------------------------
+Name: Emmanuel Aboah
+Harvard Email: ema526@g.harvard.edu
+Azure Email: AboahEmmanuel21@outlook.com
+
+Notes:
+No additional UI was implemented for this homework due to time.
+The project should run via visual studio and swagger as previous class demo's.
+1 Funtional Test and rest client have been included.
+	 Or by running each test individually.
+
+Deployed app URL: https://todotasksapphw2.azurewebsites.net/ --> Was not working will update via comment in canvas

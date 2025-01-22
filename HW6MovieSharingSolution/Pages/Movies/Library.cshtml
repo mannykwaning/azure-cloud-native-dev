@@ -1,0 +1,125 @@
+﻿@page
+@model HW6MovieSharingSolution.Pages.Movies.LibraryModel
+@{
+    ViewData["Title"] = "Library";
+}
+
+<h1>User Library</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+<table class="table col-lg-12">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].SharedWithName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].SharedWithEmailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].SharedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].AprovalStatus)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Movie)
+        {
+            bool showReview = !String.IsNullOrEmpty(item.SharedWithName) && !item.isApproved;
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SharedWithName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SharedWithEmailAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SharedDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AprovalStatus)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a> |
+                    @if (showReview)
+                    {
+                        <a asp-page="./Review" asp-route-id="@item.Id">Review Request</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<br />
+@****************************     <-- Borrowed Movies Section -->     ***************************@
+<h1> Borrowed Movies </h1>
+<hr />
+<table class="table col-lg-12">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BorrowedMovies[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BorrowedMovies[0].Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BorrowedMovies[0].Owner)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BorrowedMovies[0].OwnerEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BorrowedMovies[0].SharedDate)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var m in Model.BorrowedMovies)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => m.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => m.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => m.Owner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => m.OwnerEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => m.SharedDate)
+            </td>
+            <td></td>
+            <td>
+                <form asp-page-handler="return" asp-route-id="@m.Id" method="post">
+                    <input type="submit" value="Return" class="btn btn-primary" />
+                </form>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
