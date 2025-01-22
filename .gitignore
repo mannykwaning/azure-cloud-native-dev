@@ -15,3 +15,10 @@ publish/
 _ReSharper*/
 *.nupkg
 **/lib/
+*settings*
+*appsettings*
+**/settings.*
+**/appsettings.*
+/TodoTasksApp/appsettings.json
+/HW7DocumentSearchSolution/appsettings.json
+/HW7DocumentSearchSolution/appsettings.Development.json
